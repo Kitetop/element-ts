@@ -1,5 +1,5 @@
 {
-  "name": "vuex-router",
+  "name": "element-ts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,16 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "rxjs": "^6.5.5",
+    "rxjs-compat": "^6.5.5",
     "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.2.0",
+    "vue-rx": "^6.2.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

@@ -1,18 +1,20 @@
+<!--
+ * @Author: Kitetop
+ * @Version: 1.0
+ * @Date: 2020-06-15
+ * @Description: 
+--> 
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<el-ts-row tag="div" type="flex" align="middle">test</el-ts-row>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Row from '../../packages/row/src/row'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    ElTsRow: Row,
   }
 }
 </script>

@@ -1,8 +1,21 @@
+/*
+ * @Author: Kitetop
+ * @Version: 1.0
+ * @Date: 2020-06-15
+ * @Description: 
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueRx from 'vue-rx'
+import RxCompat from 'rxjs-compat'
 
+Vue.use(VueAxios, axios)
+Vue.use(VueRx, RxCompat)
+// Vue.component(Row.name, Row);
 Vue.config.productionTip = false
 
 new Vue({

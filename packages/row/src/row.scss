@@ -1,0 +1,20 @@
+.el-ts-row {
+    width: 100%;
+    height: 100px;
+    border: 1px solid red
+}
+.el-ts-row-flex {
+    display: flex;
+}
+
+.is-align-top {
+    align-items: flex-start;
+}
+
+.is-align-middle {
+    align-items: center;
+}
+
+.is-align-bootom {
+    align-items: flex-end;
+}
