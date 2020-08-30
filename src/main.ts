@@ -12,9 +12,12 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueRx from 'vue-rx'
 import RxCompat from 'rxjs-compat'
+import ElementTsUI from '../packages/index'
 
 Vue.use(VueAxios, axios)
 Vue.use(VueRx, RxCompat)
+
+ElementTsUI.install(Vue);
 // Vue.component(Row.name, Row);
 Vue.config.productionTip = false
 

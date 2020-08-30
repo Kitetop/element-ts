@@ -1,9 +1,10 @@
 import Vue from 'vue'
-abstract class ElementUIComponent<T> extends Vue {
-    protected name!: string;
-    protected prop!: T;
-    protected setProp(): void {
-        this.prop = this.$props as T;
+class ElementUIComponent extends Vue {
+    /** 记录组件名字字段 */
+    static componentName: string;
+    /** 装载组件的静态方法 */
+    static install(vue: typeof Vue = Vue): void {
+        return;
     }
 }
 export default ElementUIComponent;

@@ -1,8 +1,12 @@
 import { ElementUIComponent } from "./component";
-import { RowProp } from "@component/row/src/row";
 
+export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-betwee';
+export type VertialAlignment = 'top' | 'middle' | 'bottom';
 export declare class Row extends ElementUIComponent {
-    protected prop: RowProp;
-    protected setProp(): void;
+    tag: string;
+    gutter: number;
+    justify: HorizontalAlignment;
+    align: VertialAlignment;
+    type: string;
     render(h: Function): any;
 }

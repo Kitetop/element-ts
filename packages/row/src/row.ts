@@ -1,57 +1,35 @@
-import { Component } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import ElementUIComponent from "../../component";
 import './row.scss'
+import { HorizontalAlignment, VertialAlignment } from '@component/types/row';
 
-export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-betwee';
-export type VertialAlignment = 'top' | 'middle' | 'bottom';
+@Component
+export default class Row extends ElementUIComponent {
+    static componentName = 'ElTsRow'; 
 
-export interface RowProp {
-    tag: string;
-    gutter: number;
-    justify: HorizontalAlignment;
-    align: VertialAlignment;
-    type: string;
-}
-
-@Component({
-    props: {
-        tag: {
-            type: String,
-            default: 'div'
-        },
-        gutter: Number,
-        type: String,
-        justify: {
-            type: String,
-            default: 'start'
-        },
-        align: {
-            type: String,
-            default: 'top'
-        }
-    }
-})
-export default class Row extends ElementUIComponent<RowProp> {
+    @Prop({ default: 'div' }) tag !: string;
+    @Prop() gutter !: number;
+    @Prop({ default: 'start' }) justify !: HorizontalAlignment;
+    @Prop({ default: 'top'}) align !: VertialAlignment;
+    @Prop() type !: string;
     get style() {
         const ret: { marginLeft: string; marginRight: string } = {
             marginLeft: '',
             marginRight: ''
         };
-        if (this.prop.gutter) {
-            ret.marginLeft = `-${this.prop.gutter / 2}px`;
+        if (this.gutter) {
+            ret.marginLeft = `-${this.gutter / 2}px`;
             ret.marginRight = ret.marginLeft;
         }
         return ret;
     }
     render(h: Function) {
-        this.setProp();
-        console.log(this.prop.justify, 'prop');
-        return h(this.prop.tag, {
+        return h(this.tag, {
             class: [
                 'el-ts-row',
-                this.prop.justify !== 'start' ? `is-justify-${this.prop.justify}` : '',
-                this.prop.align !== 'top' ? `is-align-${this.prop.align}` : '',
-                { 'el-ts-row-flex': this.prop.type === 'flex' }
+                this.justify !== 'start' ? `is-justify-${this.justify}` : '',
+                this.align !== 'top' ? `is-align-${this.align}` : '',
+                { 'el-ts-row-flex': this.type === 'flex' }
             ],
             style: this.style
         }, this.$slots.default)
