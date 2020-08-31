@@ -1,4 +1,6 @@
 .el-ts-row {
+    position: relative;
+    box-sizing: border-box;
     width: 100%;
     border: 1px solid red
 }

@@ -6,7 +6,7 @@
 -->
 <template>
   <div>
-    <el-ts-row>test</el-ts-row>
+    <el-ts-row><el-ts-col>col</el-ts-col></el-ts-row>
     <el-ts-row tag="li">test</el-ts-row>
     <el-ts-row type="flex" justify="end">test</el-ts-row>
     <el-ts-row type="flex" justify="center">test</el-ts-row>
