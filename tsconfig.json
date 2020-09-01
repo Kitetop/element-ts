@@ -18,8 +18,7 @@
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "@component/*": ["packages/*"]
+      ]
     },
     "lib": [
       "esnext",
