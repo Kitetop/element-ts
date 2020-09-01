@@ -13,7 +13,7 @@ class ElementUIComponent extends Vue {
     static install(vue: typeof Vue = Vue): void { return; }
 
     /** 根据对象属性名称获得对象属性值 */
-    getKeyValue<U extends keyof T, T extends object>(key: U) {
+    protected getKeyValue<U extends keyof T, T extends object>(key: U) {
         return (obj: T) => { return obj[key] };
     }
 

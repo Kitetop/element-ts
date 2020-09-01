@@ -1,7 +1,7 @@
 import { Component, Prop } from "vue-property-decorator";
 import ElementUIComponent from "../../component";
 import { HorizontalAlignment, VertialAlignment } from '../../types/row';
-import './row.scss';
+import './row.css';
 
 @Component
 export default class Row extends ElementUIComponent {
@@ -35,7 +35,7 @@ export default class Row extends ElementUIComponent {
                 'el-ts-row',
                 this.justify !== 'start' ? `is-justify-${this.justify}` : '',
                 this.align !== 'top' ? `is-align-${this.align}` : '',
-                { 'el-ts-row-flex': this.type === 'flex' }
+                { 'el-ts-row--flex': this.type === 'flex' }
             ],
             style: this.style
         }, this.$slots.default)

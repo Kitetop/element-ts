@@ -11,7 +11,7 @@ export declare class ElementUIComponent extends Vue {
 
     static componentName: string;
 
-    protected getKeyValue<U extends keyof T, T extends object>(key: U): Function;
+    protected getKeyValue<U extends keyof T, T extends object>(key: U): T[U];
 
     /** 渲染函数，创建元素 */
     render(h: Function): any;
