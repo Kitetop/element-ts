@@ -1,7 +1,7 @@
 import ElementUIComponent from "../../component";
 import { Prop, Component } from 'vue-property-decorator';
 import Row from '../../row/src/row';
-import { ResponsiveColumn } from '../../types/col';
+import { ResponsiveColumn, ResponsiveColumnProperties } from '../../types/col';
 import './col.css';
 
 @Component
@@ -53,11 +53,10 @@ export default class Col extends ElementUIComponent {
         ['span', 'offset', 'pull', 'push'].forEach(prop => {
             const attr = this.getKeyValue<keyof this['$props'], this>(prop)(this);
           if (attr || Number(attr) === 0) {
-              console.log(prop, 'hhh===');
             classList.push(
               prop !== 'span'
-                ? `el-col-${prop}-${attr}`
-                : `el-col-${attr}`
+                ? `el-ts-col-${prop}-${attr}`
+                : `el-ts-col-${attr}`
             );
           }
         });
@@ -65,23 +64,18 @@ export default class Col extends ElementUIComponent {
         /** 设置列的宽度 */
         ['xs', 'sm', 'md', 'lg', 'xl'].forEach(size => {
             const attr = this.getKeyValue<keyof this['$props'], this>(size)(this);
-            console.log(attr, 'attr==');
           if (typeof attr === 'number') {
-            classList.push(`el-col-${size}-${attr}`);
+            classList.push(`el-ts-col-${size}-${attr}`);
           } else if (typeof attr === 'object') {
-            const props = JSON.parse(JSON.stringify(attr));
-            Object.keys(props).forEach(prop => {
-              classList.push(
-                prop !== 'span'
-                  ? `el-col-${size}-${prop}-${props[prop]}`
-                  : `el-col-${size}-${props[prop]}`
-              );
-            });
+            const props = JSON.parse(JSON.stringify(attr)) as ResponsiveColumnProperties;
+            props.span && classList.push(`el-ts-col-${size}-${props.span}`);
+            props.offset && classList.push(`el-ts-col-${size}-offset-${props.offset}`);
+            // classList.push(`el-ts-col-${size}-${props.span}`, `el-ts-col-${size}-offset-${props.offset}`)
           }
         });
     
         return h(this.tag, {
-          class: ['el-col', classList],
+          class: ['el-ts-col', classList],
           style: style
         }, this.$slots.default);
       }

@@ -7,7 +7,7 @@
 }
 /** 得到span push pull offset 一类的css */
 @include b(ts-col) {
-  @for $i from 0 to 24 {
+  @for $i from 0 through 24 {
     @if $i==0 {
       @at-root #{&}-#{$i} {
         display: none;
@@ -37,7 +37,7 @@
 /** 得到不同屏幕大小下对应的css类*/
 @each $key, $val in $--breakpoints {
   @include res($key) {
-    @for $i from 0 to 24 {
+    @for $i from 0 through 24 {
       @if $i == 0 {
         @include b(ts-col-#{$key}) {
           @at-root #{&}-#{$i} {
@@ -49,6 +49,20 @@
         @at-root #{&}-#{$i} {
           width: (1 / 24 * $i * 100) * 1%;
         }
+
+        @at-root #{&}-offset-#{$i} {
+            margin-left: (1 / 24 * $i * 100) * 1%;
+          }
+      
+          @at-root #{&}-pull-#{$i} {
+            position: relative;
+            right: (1 / 24 * $i * 100) * 1%;
+          }
+      
+          @at-root #{&}-push-#{$i} {
+            position: relative;
+            left: (1 / 24 * $i * 100) * 1%;
+          }
       }
     }
   }

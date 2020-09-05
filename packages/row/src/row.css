@@ -7,8 +7,6 @@
 .el-ts-row {
   position: relative;
   box-sizing: border-box;
-  width: 100%;
-  border: 1px solid red;
 }
 /** 伪元素，可能会改变dom元素 */
 .el-ts-row::before,
