@@ -4,7 +4,6 @@
   -ms-user-select: $value;
 }
 
-/** 防止margin重叠以及去除浮动 */
 @mixin utils-clearfix {
   $selector: &;
   @at-root {

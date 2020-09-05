@@ -2,6 +2,7 @@ import ElementUIComponent from "../../component";
 import { Prop, Component } from 'vue-property-decorator';
 import Row from '../../row/src/row';
 import { ResponsiveColumn } from '../../types/col';
+import './col.css';
 
 @Component
 export default class Col extends ElementUIComponent {
