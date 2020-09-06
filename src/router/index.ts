@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Layout from '../views/Layout.vue'
+import Container from '../views/Containers.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ Vue.use(VueRouter)
     path: '/layout',
     name: 'Layout',
     component: Layout
+  },
+  {
+    path: '/container',
+    name: 'Container',
+    component: Container
   },
   // {
   //   path: '/about',

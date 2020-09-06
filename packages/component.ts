@@ -10,7 +10,7 @@ class ElementUIComponent extends Vue {
 
     /** 装载组件的静态方法 */
     // eslint-disable-next-line
-    static install(vue: typeof Vue = Vue): void { return; }
+    static install(vue: typeof Vue | any): void { return; }
 
     /** 根据对象属性名称获得对象属性值 */
     protected getKeyValue<U extends keyof T, T extends object>(key: U) {

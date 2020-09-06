@@ -1,9 +1,13 @@
 import Vue from 'vue'
-import { ComponentOptions } from 'vue/types/umd';
+import { ComponentOptions, VueConstructor } from 'vue/types/umd';
 
 export interface TsComponentOptions extends ComponentOptions<Vue> {
     componentName: string;
     [prop : string]: any;
+}
+
+export interface TsVueConstructor extends VueConstructor<Vue> {
+    componentName: string;
 }
 export declare class ElementUIComponent extends Vue {
 
