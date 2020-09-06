@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 /** 得到span push pull offset 一类的css */
-@include b(ts-col) {
+@include b(col) {
   @for $i from 0 through 24 {
     @if $i==0 {
       @at-root #{&}-#{$i} {
@@ -39,13 +39,13 @@
   @include res($key) {
     @for $i from 0 through 24 {
       @if $i == 0 {
-        @include b(ts-col-#{$key}) {
+        @include b(col-#{$key}) {
           @at-root #{&}-#{$i} {
             display: none;
           }
         }
       }
-      @include b(ts-col-#{$key}) {
+      @include b(col-#{$key}) {
         @at-root #{&}-#{$i} {
           width: (1 / 24 * $i * 100) * 1%;
         }

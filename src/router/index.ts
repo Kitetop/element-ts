@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Row from '../views/Row.vue'
+import Layout from '../views/Layout.vue'
 
 Vue.use(VueRouter)
 
   const routes: Array<RouteConfig> = [
   {
-    path: '/row',
-    name: 'Row',
-    component: Row
+    path: '/layout',
+    name: 'Layout',
+    component: Layout
   },
   // {
   //   path: '/about',

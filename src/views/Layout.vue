@@ -50,7 +50,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 @Component
-export default class Row extends Vue {}
+export default class Layout extends Vue {}
 </script>
 <style type="sass">
   .el-ts-row {

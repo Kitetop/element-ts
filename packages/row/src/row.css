@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/* BEM support Func
- -------------------------- */
-/* BEM
- -------------------------- */
-/** 防止margin重叠以及去除浮动 */
+
 .el-ts-row {
   position: relative;
   box-sizing: border-box;
@@ -49,3 +45,5 @@
 .el-ts-row--flex.is-align-bottom {
   align-items: flex-end;
 }
+
+/*# sourceMappingURL=row.css.map */
