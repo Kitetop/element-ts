@@ -1,7 +1,6 @@
 import { Component, Prop } from "vue-property-decorator";
 import ElementUIComponent from "../../component";
 import { HorizontalAlignment, VertialAlignment } from '../../types/row';
-import './row.css';
 
 @Component
 export default class Row extends ElementUIComponent {
