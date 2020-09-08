@@ -1,0 +1,38 @@
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+@import "./mixins/utils.scss";
+
+@include b(row) {
+  position: relative;
+  box-sizing: border-box;
+  @include utils-clearfix;
+
+  @include m(flex) {
+    display: flex;
+    /** 伪类， 通过一些特定的选择器根据特定的状态，特定条件来修改元素的样式 */
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    @include when(justify-center) {
+      justify-content: center;
+    }
+    @include when(justify-end) {
+      justify-content: flex-end;
+    }
+    @include when(justify-space-between) {
+      justify-content: space-between;
+    }
+    @include when(justify-space-around) {
+      justify-content: space-around;
+    }
+
+    @include when(align-middle) {
+      align-items: center;
+    }
+    @include when(align-bottom) {
+      align-items: flex-end;
+    }
+  }
+}
