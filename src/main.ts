@@ -13,6 +13,7 @@ import VueAxios from 'vue-axios'
 import VueRx from 'vue-rx'
 import RxCompat from 'rxjs-compat'
 import ElementTsUI from '../packages/index'
+import '../packages/theme/index.scss'
 
 Vue.use(VueAxios, axios)
 Vue.use(VueRx, RxCompat)
