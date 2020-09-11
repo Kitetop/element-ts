@@ -5,6 +5,9 @@ import { TsComponentOptions } from './types/component';
 class ElementUIComponent extends Vue {
     /** 记录组件名字字段 */
     static componentName: string;
+    
+    /** 生成标签的前缀 */
+    static componentPrefix = 'ElTs';
 
     $options!: TsComponentOptions;
 
@@ -15,6 +18,11 @@ class ElementUIComponent extends Vue {
     /** 根据对象属性名称获得对象属性值 */
     protected getKeyValue<U extends keyof T, T extends object>(key: U) {
         return (obj: T) => { return obj[key] };
+    }
+
+    /** Get方法，获得标签前缀 */
+    protected get prefix() {
+        return ElementUIComponent.componentPrefix;
     }
 
     /** 渲染函数，创建元素 */
