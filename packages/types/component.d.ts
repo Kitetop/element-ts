@@ -15,6 +15,10 @@ export declare class ElementUIComponent extends Vue {
     static install(vue: typeof Vue): void;
 
     static componentName: string;
+    
+    static componentPrefix: string;
+    
+    protected get prefix(): string;
 
     protected getKeyValue<U extends keyof T, T extends object>(key: U): T[U];
 
