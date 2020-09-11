@@ -8,6 +8,7 @@ export interface TsComponentOptions extends ComponentOptions<Vue> {
 
 export interface TsVueConstructor extends VueConstructor<Vue> {
     componentName: string;
+    install: (vue: typeof Vue) => void;
 }
 export declare class ElementUIComponent extends Vue {
 
