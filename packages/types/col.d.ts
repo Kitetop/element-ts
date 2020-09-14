@@ -12,6 +12,7 @@ export interface ResponsiveColumnProperties {
 export type ResponsiveColumn = number | ResponsiveColumnProperties
 
 export declare class Col extends ElementUIComponent {
+  
   /** 栅格占据的列数 */
   span: number
 

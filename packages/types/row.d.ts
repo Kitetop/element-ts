@@ -3,6 +3,7 @@ import { ElementUIComponent } from "./component";
 export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-betwee';
 export type VertialAlignment = 'top' | 'middle' | 'bottom';
 export declare class Row extends ElementUIComponent {
+    
     /** 创建的标签名字， 默认是div标签 */
     tag: string;
 
