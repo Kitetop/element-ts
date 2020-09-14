@@ -1,3 +1,10 @@
+/** Header padding */
+$--header-padding: 0 20px !default;
+/** Footer padding */
+$--footer-padding: 0 20px !default;
+/** Main padding */
+$--main-padding: 20px !default;
+
 /** 屏幕对应宽度适配 */
 $--sm: 768px !default;
 $--md: 992px !default;
