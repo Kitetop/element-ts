@@ -1,0 +1,9 @@
+/** 使用Sass的字体 图标文件导入并不好用，弃用此方式，并且使用原生的css导入 */
+@font-face {
+    font-family: "element-icons";
+    src: url("./element-icons.woff") format("woff"), url("./element-icons.ttf") format("truetype");
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    font-weight: normal;
+    font-display: "auto";
+    font-style: normal;
+}

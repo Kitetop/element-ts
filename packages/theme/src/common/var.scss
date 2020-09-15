@@ -5,6 +5,10 @@ $--footer-padding: 0 20px !default;
 /** Main padding */
 $--main-padding: 20px !default;
 
+/** 字体 icon 文件的位置 */
+$--font-path: 'fonts' !default;
+$--font-display: 'auto' !default;
+
 /** 屏幕对应宽度适配 */
 $--sm: 768px !default;
 $--md: 992px !default;
